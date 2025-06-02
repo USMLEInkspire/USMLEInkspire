@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | USMLEInkspire</title>
+
+  <!-- Theme Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+ .contact-section {
+  padding: 4rem 2rem;
+  background-color: #f4f9fc;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #102A43;
+  margin-bottom: 2rem;
+}
+
+/* Input and Textarea Styles */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #102A43;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #102A43;
+  background-color: #f8fafc;
+  transition: border 0.3s, background 0.3s;
+}
+
+/* Focus State — NO BLUE SHADOW */
+form input:focus,
+form textarea:focus {
+  border-color: #3E92CC;
+  box-shadow: none;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* Textarea Specific */
+form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Hide honeypot */
+form .hidden {
+  display: none !important;
+}
+
+/* Submit Button — Optional if needed later */
+form button.submit-btn {
+  display: inline-block;
+  background-color: #3E92CC;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button.submit-btn:hover {
+  background-color: #276c9e;
+  transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 2rem 1rem;
+  }
+}
+
+</style>
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-text">
+        <a href="index.html"><span class="logo-left">USMLE</span><span class="logo-right"> Inkspire</span></a>
+      </div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      <ul class="nav-links" id="navLinks">
+       <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="clinical.html">Clinical Rotations</a></li>
+      <li><a href="research.html">Research</a></li>
+            <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="d40db144-fcf6-4a89-afc7-5082bca7692b">
+
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" placeholder="you@example.com" required>
+
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" placeholder="Write your message here..." required></textarea>
+
+        <!-- Spam Protection -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <!-- Optional Redirect (Uncomment if needed) -->
+        <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you.html"> -->
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-modern dark">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="images/usmlelogo.jpg" alt="USMLEInkspire Logo" />
+          <p class="footer-tagline">Empowering Your Residency Journey</p>
+        </div>
+      </div>
+
+      <div class="footer-contact-group">
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Mid-Baneshwor, Kathmandu-10, Nepal</p>
+          <p><i class="fas fa-phone"></i> +977 9823997787</p>
+          <p><i class="fas fa-envelope"></i> usmleinkspire@gmail.com</p>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/usmleinkspire"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom dark">
+      <p>© 2025 USMLEInkspire. All rights reserved.</p>
+      <div class="footer-links-bottom">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS for Hamburger -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
