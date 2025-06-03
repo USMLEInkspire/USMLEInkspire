@@ -915,6 +915,9 @@ footer {
   padding: 2rem 1rem;
   box-sizing: border-box;
 }
+.bundle-modal.show {
+  display: flex;
+}
 
 
 .bundle-modal-content {
