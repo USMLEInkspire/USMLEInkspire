@@ -902,20 +902,20 @@ footer {
 }/* Popup Modal Styling */
 /* Base modal styles */
 .bundle-modal {
-  display: none;
+  display: none; /* Hidden initially */
   position: fixed;
   z-index: 9999;
   left: 0; top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(16, 42, 67, 0.85);
-  display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: auto; /* Enable vertical scrolling when needed */
+  overflow-y: auto;
   padding: 2rem 1rem;
   box-sizing: border-box;
 }
+
 
 .bundle-modal-content {
   background-color: white;
