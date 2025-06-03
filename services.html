@@ -210,28 +210,32 @@
 </footer>
 
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
+    const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
-    function closeBundleModal() {
-    document.getElementById("bundleModal").style.display = "none";
-    sessionStorage.setItem("bundleShown", "true");
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+function closeBundleModal() {
+  const modal = document.getElementById("bundleModal");
+  modal.style.display = "none";
+  sessionStorage.setItem("bundleShown", "true");
+}
+
+function showBundleModal() {
+  const alreadyShown = sessionStorage.getItem("bundleShown");
+  if (!alreadyShown) {
+    document.getElementById("bundleModal").style.display = "flex";
+    sessionStorage.setItem("bundleShown", "true");  // Set here to avoid repeat popups
   }
+}
 
-  function showBundleModal() {
-    const alreadyShown = sessionStorage.getItem("bundleShown");
-    if (!alreadyShown) {
-      document.getElementById("bundleModal").style.display = "flex";
-    }
-  }
+// Show popup after 55 seconds (55000ms)
+window.addEventListener("load", () => {
+  setTimeout(showBundleModal, 55000);
+});
 
-  // Show popup after 45 seconds (45000ms)
-  window.addEventListener("load", () => {
-    setTimeout(showBundleModal, 30000);
-  });
   </script>
 </body>
 </html>
