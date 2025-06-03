@@ -210,24 +210,24 @@
 </footer>
 
   <script>
-    const hamburger = document.getElementById("hamburger");
+   const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
+const modal = document.getElementById("bundleModal");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
 function closeBundleModal() {
-  const modal = document.getElementById("bundleModal");
-  modal.style.display = "none";
+  modal.classList.remove("show");
   sessionStorage.setItem("bundleShown", "true");
 }
 
 function showBundleModal() {
   const alreadyShown = sessionStorage.getItem("bundleShown");
   if (!alreadyShown) {
-    document.getElementById("bundleModal").style.display = "flex";
-    sessionStorage.setItem("bundleShown", "true");  // Set here to avoid repeat popups
+    modal.classList.add("show");
+    sessionStorage.setItem("bundleShown", "true");  // Prevent repeat popups
   }
 }
 
@@ -235,6 +235,7 @@ function showBundleModal() {
 window.addEventListener("load", () => {
   setTimeout(showBundleModal, 30000);
 });
+
 
   </script>
 </body>
